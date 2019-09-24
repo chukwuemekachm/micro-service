@@ -1,0 +1,15 @@
+{
+  "name": "micro-service",
+  "description": "Express Gateway Instance Bootstraped from Command Line",
+  "repository": {},
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "babel-dev": "babel-node index.js",
+    "dev": "nodemon --exec yarn babel-dev"
+  },
+  "dependencies": {
+    "express-gateway": "^1.16.7"
+  }
+}
