@@ -2,7 +2,9 @@
   "name": "micro-service",
   "private": true,
   "scripts": {
-    "dev": "lerna exec --no-bail yarn dev"
+    "dev": "lerna exec --no-bail yarn dev",
+    "test": "nyc --reporter=html --reporter=text mocha --exit --require babel-register ./**/__tests__/*.spec.js",
+    "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -10,10 +12,17 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.6",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "2.18.2",
     "lerna": "^3.4.3",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "nyc": "^14.1.1"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.0"
   }
 }

@@ -6,12 +6,17 @@
     "extends": "airbnb-base",
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "describe": true, 
+        "it": true,
+        "before": true
     },
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "rules": {
+        "import/prefer-default-export": 0,
+        "import/no-extraneous-dependencies": 0
     }
 }
