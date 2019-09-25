@@ -5,8 +5,10 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 COPY . ./
 
+ENV SENTRY_DSN=$SENTRY_DSN
+
 RUN yarn
-RUN lerna bootstrap
+RUN yarn bootstrap
 
 EXPOSE 3000
 

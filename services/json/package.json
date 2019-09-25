@@ -4,8 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "babel-dev": "babel-node index.js",
-    "dev": "nodemon --exec yarn babel-dev"
+    "babel-dev": "babel-node src/index.js",
+    "dev": "nodemon --exec yarn babel-dev",
+    "build": "rm -rf build && babel src --out-dir ./build --source-maps",
+    "start": "node ./build"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

@@ -1,7 +1,7 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 
-import identityService from '../index';
+import identityService from '../src';
 
 chai.use(chaiHttp);
 const { expect } = chai;

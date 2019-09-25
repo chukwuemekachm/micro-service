@@ -22,6 +22,7 @@ Sentry.init({
   serverName: 'IDENTITY-MICRO-SERVICE',
 });
 
+
 gateway()
-  .load(path.join(__dirname, 'config'))
+  .load(path.join(process.cwd(), 'config'))
   .run();
