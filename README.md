@@ -9,6 +9,8 @@ A simple stateless microservice in Nodejs, with three major functionalities -
 * **Image Thumbnail Generation**
 
 ## Getting Started
+Before you proceed, setup an account on [Sentry](https://sentry.io/welcome/) and obtain a `DSN` key.
+
 To setup **micro-service**, the following should be installed on your machine.
 
 - [Node.js](https://nodejs.org/en/download/current/) 8 and above
@@ -18,7 +20,7 @@ To setup **micro-service**, the following should be installed on your machine.
 
 If you have all the prerequisites you can use the steps below to setup **micro-service** locally.
 
-##### Clone visand
+##### Clone micro-service
 - Open your terminal and `cd` to the directory where you will like to download **micro-service**, then run
 ```sh
 git clone https://github.com/chukwuemekachm/micro-service.git
@@ -27,6 +29,12 @@ git clone https://github.com/chukwuemekachm/micro-service.git
 ```sh
 cd micro-service
 ```
+
+##### Setup env variables
+```bash
+cp .env-sample .env
+```
+- Replace the .env values with your preferred values
 
 
 ##### Install Dependencies
