@@ -5,7 +5,10 @@
     "dev": "lerna exec --no-bail yarn dev",
     "test": "nyc --reporter=html --reporter=text mocha --exit --require babel-register ./**/__tests__/*.spec.js",
     "bootstrap": "lerna bootstrap",
-    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov"
+    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov",
+    "build": "lerna exec yarn build",
+    "prestart": "yarn build",
+    "start": "lerna exec --no-bail yarn start"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,7 +1,7 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 
-import jsonService from '../index';
+import jsonService from '../src';
 
 chai.use(chaiHttp);
 const { expect } = chai;

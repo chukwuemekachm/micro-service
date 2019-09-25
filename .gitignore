@@ -65,3 +65,6 @@ typings/
 *.jpeg
 *.png
 *.gif
+
+# build
+build
