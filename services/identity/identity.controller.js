@@ -1,9 +1,26 @@
+/**
+ * @fileOverview Contains the Identity Controller methods
+ *
+ * @author Chima Chukwuemeka
+ *
+ * @requires NPM:jsonwebtoken
+*/
+
 import jwt from 'jsonwebtoken';
 
 const {
   JWT_KEY = 'JWT_KEY',
 } = process.env;
 
+/**
+ * @description Authenticates a user with random credentials
+ *
+ * @param {object} request - The HTTP request object
+ * @param {object} response - The HTTP response object
+ * @param {object} next - The next middleware to be invoked
+ *
+ * @returns {object}
+*/
 export function login({ body }, response, next) {
   try {
     const { username, password } = body;

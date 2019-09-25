@@ -1,3 +1,11 @@
+/**
+ * @fileOverview Contains the logger instance
+ *
+ * @author Chima Chukwuemeka
+ *
+ * @requires NPM:winston
+*/
+
 import winston from 'winston';
 
 const logger = winston.createLogger({
