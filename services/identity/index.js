@@ -1,14 +1,35 @@
+/**
+ * @fileOverview Contains the Identity Service
+ *
+ * @author Chima Chukwuemeka
+ *
+ * @requires NPM:express
+ * @requires NPM:body-parser
+ * @requires NPM:helmet
+ * @requires NPM:@sentry/node
+ * @requires identity.routes
+ * @requires logger
+*/
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
+import * as Sentry from '@sentry/node';
 
 import routes from './identity.routes';
 import logger from './logger';
 
-const identityService = express();
 const {
   IDENTITY_SERVICE_PORT = 3001,
+  SENTRY_DSN = 'SENTRY_DSN',
 } = process.env;
+
+Sentry.init({
+  dsn: SENTRY_DSN,
+  maxBreadcrumbs: 50,
+  serverName: 'IDENTITY-MICRO-SERVICE',
+});
+const identityService = express();
 
 identityService.use(helmet());
 identityService.use(bodyParser.urlencoded({ extended: true }));

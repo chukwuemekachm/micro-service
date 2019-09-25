@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "lerna exec --no-bail yarn dev",
     "test": "nyc --reporter=html --reporter=text mocha --exit --require babel-register ./**/__tests__/*.spec.js",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -21,6 +22,7 @@
     "nyc": "^14.1.1"
   },
   "dependencies": {
+    "@sentry/node": "5.6.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "mocha": "^6.2.0"

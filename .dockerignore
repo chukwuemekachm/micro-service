@@ -1,0 +1,10 @@
+# nodejs
+node_modules
+
+# env
+.env.example
+
+# git files
+LICENSE
+README.md
+.gitignore
