@@ -6,7 +6,7 @@ const logger = winston.createLogger({
     winston.format.colorize({ all: true }),
     winston.format.simple(),
   ),
-  defaultMeta: { service: 'json-service' },
+  defaultMeta: { service: 'image-service' },
   transports: [
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
     new winston.transports.File({ filename: 'combined.log' }),
