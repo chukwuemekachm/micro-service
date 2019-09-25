@@ -11,6 +11,8 @@
  * @requires logger
 */
 
+require('dotenv').config({ path: '../../.env' });
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';

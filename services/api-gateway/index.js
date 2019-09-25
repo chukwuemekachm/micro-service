@@ -8,6 +8,8 @@
  * @requires NPM:express-gateway
 */
 
+require('dotenv').config({ path: '../../.env' });
+
 import path from 'path';
 import gateway from 'express-gateway';
 import * as Sentry from '@sentry/node';
